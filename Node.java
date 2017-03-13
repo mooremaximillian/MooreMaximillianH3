@@ -7,21 +7,33 @@ public class Node
   // initializes the names that will be included in lists
  private String name;
  // intializes the next node
- private Node next;
+  Node next;
  //initializes the prev node
- private Node prev;
+  Node prev;
  
  
  //Consturctor to input a new name 
- public Node(String name)
+ public Node(String name, Node a, Node b)
  {
+   next = a;
    this.name = name;
+   prev = b;
  }
- 
+ /**
+  * Constructor to just input the string
+  */ 
+ Node(String n)
+ {
+   this(n, null, null);
+ }
+ /**
+  * Retrieves the Node that the current node points to
+  */ 
  public Node getNext()
  {
    return next;
  }
+ 
  
  public void setNext(Node node)
  {
