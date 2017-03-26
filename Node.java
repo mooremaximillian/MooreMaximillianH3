@@ -34,6 +34,16 @@ public class Node
    return next;
  }
  
+ public Node getPrev()
+ {
+   return prev;
+ }
+ 
+ public String getName()
+ {
+   return name;
+ }
+ 
  
  public void setNext(Node node)
  {

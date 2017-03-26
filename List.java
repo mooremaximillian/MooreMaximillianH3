@@ -77,6 +77,42 @@ public class List
      succ.prev = pred;
    return true;
  }
+ 
+  public  void iterateForward(){
+      
+     if (this.isEmpty()) {
+      System.out.println("List is empty.");
+    }
+    else {
+      Node tmp = this.head;
+      while (tmp != null) {
+        System.out.println(tmp);
+        tmp = tmp.getNext();
+      }
+      System.out.println("");
+    }
+  }
+    
+   public void iterateBackward()
+   {
+     if(this.isEmpty())
+     {
+       System.out.println("list is empty.");
+     }
+     else
+     {
+       Node tmp = this.tail;
+       while(tmp!= null)
+       {
+         System.out.print(tmp);
+         tmp = tmp.getPrev();
+       }
+       System.out.println("");
+     }
+   }
+  
+        
+    
    
  
    
