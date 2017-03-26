@@ -5,6 +5,14 @@ public class Main
  {
    List newList = new List();
    newList.addNode("Frank");
+   newList.addNode("Max");
+   newList.addNode("Eli");
+   newList.iterateForward();
+   newList.deleteNode("Max");
+   newList.iterateBackward();
+   
+   
+   
    
  }
 }
