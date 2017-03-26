@@ -4,15 +4,16 @@
 public class List
 {
   // intializes the Node head
-  Node head;
+   private Node head;
  // initalizes the Node tail
-  Node tail;
+ private Node tail;
  
  
  public List()
    
  {
-   
+   head = null;
+   tail = null;
  }
  
  public List(Node head, Node tail)
@@ -48,12 +49,38 @@ public class List
  public void findNode(String name)
  {
    
- }
- 
- public void deleteNode(String name)
- {
    
  }
+ 
+ public boolean deleteNode(String element)
+ {
+   if(isEmpty())
+     return false;
+   
+   Node target = head;
+   while(target != null && !element.equals(target.name))
+     target = target.next;
+   
+   if(target == null)
+     return false;
+   
+   Node pred = target.prev;
+   Node succ = target.next;
+   
+   if(pred == null)
+     head = succ;
+   else
+     pred.next = succ;
+   if(succ == null)
+     tail = pred;
+   else
+     succ.prev = pred;
+   return true;
+ }
+   
+ 
+   
+ 
  
  public void deleteList(Node node)
  {
@@ -81,5 +108,7 @@ public class List
  {
    return head == null;
  }
+ 
+ 
   
 }
