@@ -7,9 +7,12 @@ public class Main
    newList.addNode("Frank");
    newList.addNode("Max");
    newList.addNode("Eli");
+   newList.findNode("Frank");
    newList.iterateForward();
    newList.deleteNode("Max");
    newList.iterateBackward();
+   newList.deleteList();
+   newList.iterateForward();
    
    
    

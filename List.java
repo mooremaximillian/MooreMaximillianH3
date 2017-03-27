@@ -40,17 +40,43 @@ public class List
    
  }
  
+ 
+ public void addAlphabetical(String n)
+ {
+   if(isEmpty())
+   {
+     tail = new Node(n);
+     head = tail;
+   }
+   else
+   {
+     tail.next = new Node(n, null, tail);
+     tail = tail.next;
+   }
+   
+ }
+ 
  public void alphabeticalOrder(String name)
  {
    
    
  }
  
- public void findNode(String name)
- {
+ // Issue with a node that could not be found
+    public void findNode(String name){
+        Node currentNode = head;
+        while(currentNode.getName()!= name)
+        {
+            currentNode = currentNode.getNext();
+            if(currentNode == null)
+                System.out.println("Node not Found");
+        }
+        System.out.println("Node has been found!");
+    }
+
    
    
- }
+ 
  
  public boolean deleteNode(String element)
  {
@@ -106,6 +132,7 @@ public class List
        {
          System.out.print(tmp);
          tmp = tmp.getPrev();
+         System.out.println("");
        }
        System.out.println("");
      }
@@ -118,8 +145,9 @@ public class List
    
  
  
- public void deleteList(Node node)
+ public void deleteList()
  {
+   head = null;
    
  }
  /**
