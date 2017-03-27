@@ -34,6 +34,7 @@ public class List
    }
    else
    {
+     
      tail.next = new Node(n, null, tail);
      tail = tail.next;
    }
@@ -43,24 +44,41 @@ public class List
  
  public void addAlphabetical(String n)
  {
-   if(isEmpty())
+   Node newNode = new Node(n);
+   
+   Node current = head;
+   Node previous = null;
+   
+   while(current != null && n.compareTo(current.getName()) >= 0){
+        previous = current;
+        current = current.next;
+    }
+
+    if(previous == null){
+        head = newNode;
+    }else{
+        previous.next = newNode;
+       
+    }
+     newNode.next = current;
+  /** if(isEmpty())
    {
      tail = new Node(n);
      head = tail;
    }
    else
    {
-     tail.next = new Node(n, null, tail);
-     tail = tail.next;
+     while(n.compareTo(currentNode.getName()) >= 0)
+       currentNode = currentNode.getNext();
    }
+   currentNode.next = new Node(n);
+     currentNode.next.next.prev = new Node(n);
+    // tail.next = new Node(n, null, tail);
+     // tail = tail.next;
    
+   **/
  }
  
- public void alphabeticalOrder(String name)
- {
-   
-   
- }
  
  // Issue with a node that could not be found
     public void findNode(String name){
