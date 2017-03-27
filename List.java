@@ -8,7 +8,8 @@ public class List
  // initalizes the Node tail
  private Node tail;
  
- 
+ /** constructor for list class
+   */ 
  public List()
    
  {
@@ -41,7 +42,10 @@ public class List
    
  }
  
- 
+ /** adds a new node to the list in alphabetical order
+   * @param the name of the new node
+   * @return void
+   */ 
  public void addAlphabetical(String n)
  {
    Node newNode = new Node(n);
@@ -61,26 +65,15 @@ public class List
        
     }
      newNode.next = current;
-  /** if(isEmpty())
-   {
-     tail = new Node(n);
-     head = tail;
-   }
-   else
-   {
-     while(n.compareTo(currentNode.getName()) >= 0)
-       currentNode = currentNode.getNext();
-   }
-   currentNode.next = new Node(n);
-     currentNode.next.next.prev = new Node(n);
-    // tail.next = new Node(n, null, tail);
-     // tail = tail.next;
-   
-   **/
+ 
  }
  
  
- // Issue with a node that could not be found
+   /**
+    * Finds a node with a given String input
+    * @param the name of the Node
+    * @return void
+    */ 
     public void findNode(String name){
         Node currentNode = head;
         while(currentNode.getName()!= name)
@@ -95,7 +88,11 @@ public class List
    
    
  
- 
+ /**
+  * Deletes a Node
+  * @param - input of node to be deleted
+  * @return boolean wether it has been deleted or not
+  */ 
  public boolean deleteNode(String element)
  {
    if(isEmpty())
@@ -121,7 +118,8 @@ public class List
      succ.prev = pred;
    return true;
  }
- 
+ /** prints the list forward
+   */ 
   public  void iterateForward(){
       
      if (this.isEmpty()) {
@@ -136,7 +134,9 @@ public class List
       System.out.println("");
     }
   }
-    
+    /**
+     * prints the list backward
+     */ 
    public void iterateBackward()
    {
      if(this.isEmpty())
@@ -162,29 +162,16 @@ public class List
  
    
  
- 
+ /**
+  * Deletes the list
+  */ 
  public void deleteList()
  {
    head = null;
    
  }
  /**
-  * Uses while loop to go through list and count the size
-  * @return the number of nodes in the list
- public int size()
- {
-   int count = 0;
-   Node n = head;
-   while(n != null)
-   {
-     count ++;
-     n = n.next;
-   }
-   return count;
- }
- /**
-  * Checks if the lis is empty
-  * @return false is not empty true if it is
+  * Checks if the list is empty
   */ 
  public boolean isEmpty()
  {

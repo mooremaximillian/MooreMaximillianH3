@@ -1,6 +1,8 @@
 public class Main
 {
-  
+  /**
+   * Test's for all methods in the List class
+   */ 
  public static void main(String args[])
  {
    List newList = new List();
@@ -13,10 +15,10 @@ public class Main
    newList.iterateBackward();
    
    
-   newList.addNode("All");
-   newList.addNode("Frank");
+   
    newList.addAlphabetical("All");
    newList.addAlphabetical("Ball");
+   newList.addAlphabetical("Dall");
    newList.addAlphabetical("Call");
    newList.iterateForward();
    

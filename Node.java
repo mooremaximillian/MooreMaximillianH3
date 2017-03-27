@@ -13,7 +13,7 @@ public class Node
  
  
  //Consturctor to input a new name 
- public Node(String naem, Node n, Node p)
+ public Node(String name, Node n, Node p)
  {
    next = n;
    this.name = name;
